@@ -84,10 +84,18 @@ This extension works by detecting article links on the Inoreader page. If it's n
 
 No build process is required. The extension can be loaded directly into Chrome as an unpacked extension.
 
+### Current Status
+
+✅ **Confirmed Working** (as of 2025-12-21)
+- Works with Inoreader's Magazine view
+- Correctly identifies articles using `a.article_magazine_title_link` selector
+- Successfully opens specified number of tabs
+- Settings persistence works correctly
+
 ### TODO
 
 - [ ] Add extension icons (16x16, 48x48, 128x128)
-- [ ] Add support for different Inoreader view modes (if needed)
+- [ ] Test with different Inoreader view modes (List view, Card view, etc.)
 - [ ] Add tests
 - [ ] Consider adding a visual indicator when articles are being opened
 - [ ] Add option to mark articles as read after opening

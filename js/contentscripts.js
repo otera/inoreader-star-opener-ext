@@ -1,5 +1,5 @@
 (function() {
-    var DEBUG = true;
+    var DEBUG = false;
 
     var onKeyDown = function(event) {
         // Push "w" key (without modifiers to avoid conflicts)
