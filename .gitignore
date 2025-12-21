@@ -1,0 +1,16 @@
+# Mac
+.DS_Store
+
+# Development
+*.log
+node_modules/
+
+# Build artifacts
+*.zip
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inoreader Star Opener Options</title>
+    <link rel="stylesheet" type="text/css" href="/css/options.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inoreader Star Opener Options</h1>
+
+        <div class="option-group">
+            <label for="iso_tabcount">Number of tabs to open:</label>
+            <input id="iso_tabcount" type="number" min="1" max="20" />
+            <span class="help-text">(1-20 tabs)</span>
+        </div>
+
+        <div class="button-group">
+            <button id="save" class="primary-button">Save Settings</button>
+        </div>
+
+        <div id="status" class="status-message"></div>
+
+        <div class="info-section">
+            <h2>How to use</h2>
+            <ol>
+                <li>Go to Inoreader's Starred page (<a href="https://www.inoreader.com/starred" target="_blank">https://www.inoreader.com/starred</a>)</li>
+                <li>Press the <kbd>w</kbd> key to open starred articles in background tabs</li>
+                <li>The number of tabs opened is determined by the setting above</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="/js/options.js"></script>
+</body>
+</html>
