@@ -1,35 +1,33 @@
 {
-    "manifest_version": 3,
-    "name": "Inoreader Star Opener",
-    "version": "1.0.0",
-    "description": "Open Inoreader starred items in background tabs with keyboard shortcut",
-    "content_scripts": [
-        {
-            "matches": [
-                "http://www.inoreader.com/*",
-                "https://www.inoreader.com/*",
-                "http://inoreader.com/*",
-                "https://inoreader.com/*"
-            ],
-            "js": ["js/contentscripts.js"]
-        }
-    ],
-    "options_page": "html/options.html",
-    "background": {
-        "service_worker": "background.js"
-    },
-    "permissions": [
-        "storage"
-    ],
-    "host_permissions": [
+  "manifest_version": 3,
+  "name": "Inoreader Star Opener",
+  "version": "1.0.0",
+  "description": "Open Inoreader starred items in background tabs with keyboard shortcut",
+  "content_scripts": [
+    {
+      "matches": [
         "http://www.inoreader.com/*",
         "https://www.inoreader.com/*",
         "http://inoreader.com/*",
         "https://inoreader.com/*"
-    ],
-    "icons": {
-        "16": "img/icon16.png",
-        "48": "img/icon48.png",
-        "128": "img/icon128.png"
+      ],
+      "js": ["js/contentscripts.js"]
     }
+  ],
+  "options_page": "html/options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "http://www.inoreader.com/*",
+    "https://www.inoreader.com/*",
+    "http://inoreader.com/*",
+    "https://inoreader.com/*"
+  ],
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  }
 }
