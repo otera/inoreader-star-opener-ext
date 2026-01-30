@@ -206,7 +206,13 @@
                 console.log(
                   'Unstarring article: ' + article.title.substring(0, 30)
                 );
-              article.starButton.click();
+              // Use dispatchEvent instead of click() to avoid CSP issues with javascript: URLs
+              var clickEvent = new MouseEvent('click', {
+                view: window,
+                bubbles: true,
+                cancelable: true
+              });
+              article.starButton.dispatchEvent(clickEvent);
             } else {
               if (DEBUG)
                 console.log(
