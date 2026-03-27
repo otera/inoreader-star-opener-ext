@@ -5,6 +5,7 @@ A Chrome extension that opens your Inoreader starred articles in background tabs
 ## Features
 
 - Open multiple starred articles in background tabs with a single keypress
+- Automatically unstar articles after opening them
 - Configurable number of tabs to open (1-20)
 - Simple keyboard shortcut: Press `w` on the Inoreader starred page
 - No API key required - works by parsing the page DOM
@@ -77,28 +78,12 @@ This extension works by detecting article links on the Inoreader page. If it's n
 │   └── options.html       # Options page UI
 ├── css/
 │   └── options.css        # Options page styles
-└── img/                   # Extension icons (to be added)
+└── img/                   # Extension icons
 ```
 
 ### Building
 
 No build process is required. The extension can be loaded directly into Chrome as an unpacked extension.
-
-### Current Status
-
-✅ **Confirmed Working** (as of 2025-12-21)
-- Works with Inoreader's Magazine view
-- Correctly identifies articles using `a.article_magazine_title_link` selector
-- Successfully opens specified number of tabs
-- Settings persistence works correctly
-
-### TODO
-
-- [ ] Add extension icons (16x16, 48x48, 128x128)
-- [ ] Test with different Inoreader view modes (List view, Card view, etc.)
-- [ ] Add tests
-- [ ] Consider adding a visual indicator when articles are being opened
-- [ ] Add option to mark articles as read after opening
 
 ## Troubleshooting
 
