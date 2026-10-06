@@ -1,6 +1,6 @@
 {
   "name": "inoreader-star-opener-ext",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Chrome extension that opens your Inoreader starred articles in background tabs with a simple keyboard shortcut.",
   "main": "background.js",
   "scripts": {

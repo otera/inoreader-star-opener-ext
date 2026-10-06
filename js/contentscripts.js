@@ -206,11 +206,22 @@
                 console.log(
                   'Unstarring article: ' + article.title.substring(0, 30)
                 );
-              // Use dispatchEvent instead of click() to avoid CSP issues with javascript: URLs
+              // The star button is <a href="javascript:...">. A synthetic click
+              // from the content script still runs the anchor's default action
+              // (javascript: navigation), which the extension's CSP blocks.
+              // Cancel only the default action; the page's click handlers
+              // (which perform the actual unstar) still run.
+              article.starButton.addEventListener(
+                'click',
+                function (e) {
+                  e.preventDefault();
+                },
+                { once: true }
+              );
               var clickEvent = new MouseEvent('click', {
                 view: window,
                 bubbles: true,
-                cancelable: true
+                cancelable: true,
               });
               article.starButton.dispatchEvent(clickEvent);
             } else {
